@@ -17,6 +17,7 @@ namespace AutoClicker
         int cpsMax = 0;
         Robot robot;
         public bool exit = false;
+        public bool canClick = false;
         public int threadId { get; set; }
         public bool isClicking = false;
 
@@ -50,13 +51,16 @@ namespace AutoClicker
 
             while (!exit)
             {
-                trueCps = r.Next(cpsMin, cpsMax);
+                if (canClick)
+                {
+                    trueCps = r.Next(cpsMin, cpsMax);
 
-                Thread.Sleep(1000 / trueCps);
-                //Call the imported function with the cursor's current position
-                uint X = (uint)Cursor.Position.X;
-                uint Y = (uint)Cursor.Position.Y;
-                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+                    Thread.Sleep(1000 / trueCps);
+                    //Call the imported function with the cursor's current position
+                    uint X = (uint)Cursor.Position.X;
+                    uint Y = (uint)Cursor.Position.Y;
+                    mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+                }
             }
         }
 
