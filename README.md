@@ -5,7 +5,7 @@
 ## Language
 
 - <a href="#english">English</a>
-- <a href="french">Français</a>
+- <a href="#french">Français</a>
 
 ## <a title="english">English</a>
 
