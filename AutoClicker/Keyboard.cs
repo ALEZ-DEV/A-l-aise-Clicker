@@ -49,9 +49,17 @@ namespace AutoClicker
             {
                 int vkCode = Marshal.ReadInt32(lParam);
                 Console.WriteLine((Keys)vkCode);
+
                 if ((Keys)vkCode == Program.EnableKey)
                 {
                     Program.SetClicking();
+                }
+
+                if (Program.form.canSetKey)
+                {
+                    Program.form.canSetKey = false;
+                    Program.SetKey((Keys)vkCode);
+                    Program.form.RefreshButton();
                 }
             }
             return CallNextHookEx(_keyboardHookID, nCode, wParam, lParam);

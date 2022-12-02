@@ -15,8 +15,8 @@ namespace AutoClicker
         public static Keyboard keyboard;
         public static Form1 form;
 
-        public static int cpsMin = 100;
-        public static int cpsMax = 100;
+        public static int cpsMin = 10;
+        public static int cpsMax = 14;
 
         static void Main()
         {
@@ -58,6 +58,21 @@ namespace AutoClicker
             {
                 autoClicker.canClick = !autoClicker.canClick;
             }
+        }
+
+        public static void SetCpsMax(int value)
+        {
+            cpsMax = value;
+        }
+
+        public static void SetCpsMin(int value)
+        {
+            cpsMin = value;
+        }
+
+        public static void SetKey(Keys key)
+        {
+            EnableKey = key;
         }
     }
 }

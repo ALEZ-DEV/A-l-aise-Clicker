@@ -3,6 +3,7 @@ using Desktop.Robot.Clicks;
 using Desktop.Robot.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -55,13 +56,22 @@ namespace AutoClicker
                 {
                     trueCps = r.Next(cpsMin, cpsMax);
 
-                    Thread.Sleep(1000 / trueCps);
+                    wait(1000 / trueCps);
                     //Call the imported function with the cursor's current position
                     uint X = (uint)Cursor.Position.X;
                     uint Y = (uint)Cursor.Position.Y;
                     mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
                 }
             }
+        }
+
+        public void wait(int milliSeconds)
+        {
+            Stopwatch sw = Stopwatch.StartNew();
+
+            while (sw.Elapsed.TotalMilliseconds < milliSeconds) { }
+
+            sw.Stop();
         }
 
         public Thread GetCurrentThread()
