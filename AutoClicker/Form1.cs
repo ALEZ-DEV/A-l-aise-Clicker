@@ -20,11 +20,15 @@ namespace AutoClicker
 
         public bool canSetKey = false;
 
+        private Lang language;
+
         public Form1()
         {
             InitializeComponent();
+            language = new Lang("en");
             SetConsoleShow();
             SetStateLabel(false);
+
             ValueCpsMaxLabel.Text = Program.cpsMax.ToString();
             ValueCpsMinLabel.Text = Program.cpsMin.ToString();
             trackBar_CpsMax.Maximum = CPS_MAX_VALUE;
@@ -37,14 +41,40 @@ namespace AutoClicker
 
             EnableKeyButton.Text = Program.EnableKey.ToString();
 
-            comboBoxTheme.Items.Add("Gray");
-            comboBoxTheme.Items.Add("Dark");
-            comboBoxTheme.Items.Add("Light");
             comboBoxTheme.SelectedIndex = 0;
 
-            comboBoxLanguage.Items.Add("English");
-            comboBoxLanguage.Items.Add("Français");
             comboBoxLanguage.SelectedIndex = 0;
+
+            SetLanguage("en");
+        }
+
+        public void SetLanguage(string lang)
+        {
+            language.SetLanguage(lang);
+
+            EnableKeyLabel.Text = language.enableKeyLabel;
+
+            ThemeLabel.Text = language.themeLabel;
+
+            LanguageLabel.Text = language.languageLabel;
+
+            if (isShow)
+            {
+                consoleButton.Text = language.showConsole;
+            }
+            else
+            {
+                consoleButton.Text = language.hideConsole;
+            }
+
+            if (state)
+            {
+                StateLabel.Text = language.stateEnable;
+            }
+            else
+            {
+                StateLabel.Text = language.stateDisable;
+            }
         }
 
         bool isShow = true;
@@ -61,27 +91,31 @@ namespace AutoClicker
             if (isShow)
             {
                 ShowWindow(handle, SW_HIDE);
-                consoleButton.Text = "Show Console";
+                consoleButton.Text = language.hideConsole;
                 isShow = !isShow;
             }
             else
             {
                 ShowWindow(handle, SW_SHOW);
-                consoleButton.Text = "Hide Console";
+                consoleButton.Text = language.showConsole;
                 isShow = !isShow;
             }
         }
 
+        bool state;
+
         public void SetStateLabel(bool state)
         {
+            this.state = state;
+
             if (state)
             {
-                StateLabel.Text = "State : Enable";
+                StateLabel.Text = language.stateEnable;
                 StateLabel.BackColor = Color.LightGreen;
             }
             else
             {
-                StateLabel.Text = "State : Disable";
+                StateLabel.Text = language.stateDisable;
                 StateLabel.BackColor = Color.LightSalmon;
             }
         }
@@ -178,6 +212,23 @@ namespace AutoClicker
                 LanguageLabel.ForeColor = Color.Black;
 
                 Console.WriteLine("change theme to Light");
+            }
+        }
+
+        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string value = comboBoxLanguage.SelectedItem.ToString();
+
+            if (value == "English")
+            {
+                SetLanguage("en");
+                EnableKeyButton.Location = new Point(164, 100);
+            }
+            else if (value == "Français")
+            {
+                SetLanguage("fr");
+                EnableKeyButton.Location = new Point(254, 100);
             }
         }
     }

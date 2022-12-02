@@ -48,9 +48,10 @@
             // 
             // consoleButton
             // 
-            this.consoleButton.Location = new System.Drawing.Point(12, 175);
+            this.consoleButton.Location = new System.Drawing.Point(17, 292);
+            this.consoleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.consoleButton.Name = "consoleButton";
-            this.consoleButton.Size = new System.Drawing.Size(115, 23);
+            this.consoleButton.Size = new System.Drawing.Size(164, 38);
             this.consoleButton.TabIndex = 0;
             this.consoleButton.Text = "Show Console";
             this.consoleButton.UseVisualStyleBackColor = true;
@@ -61,32 +62,35 @@
             this.StateLabel.AutoSize = true;
             this.StateLabel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.StateLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StateLabel.Location = new System.Drawing.Point(12, 19);
+            this.StateLabel.Location = new System.Drawing.Point(17, 32);
+            this.StateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StateLabel.Name = "StateLabel";
-            this.StateLabel.Size = new System.Drawing.Size(51, 25);
+            this.StateLabel.Size = new System.Drawing.Size(73, 36);
             this.StateLabel.TabIndex = 1;
             this.StateLabel.Text = "State";
             // 
             // trackBar_CpsMax
             // 
-            this.trackBar_CpsMax.Location = new System.Drawing.Point(309, 34);
+            this.trackBar_CpsMax.Location = new System.Drawing.Point(441, 57);
+            this.trackBar_CpsMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trackBar_CpsMax.Maximum = 30;
             this.trackBar_CpsMax.Minimum = 10;
             this.trackBar_CpsMax.Name = "trackBar_CpsMax";
             this.trackBar_CpsMax.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar_CpsMax.Size = new System.Drawing.Size(45, 137);
+            this.trackBar_CpsMax.Size = new System.Drawing.Size(69, 228);
             this.trackBar_CpsMax.TabIndex = 2;
             this.trackBar_CpsMax.Value = 10;
             this.trackBar_CpsMax.Scroll += new System.EventHandler(this.trackBar_CpsMax_Scroll);
             // 
             // trackBar_CpsMin
             // 
-            this.trackBar_CpsMin.Location = new System.Drawing.Point(360, 34);
+            this.trackBar_CpsMin.Location = new System.Drawing.Point(514, 57);
+            this.trackBar_CpsMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trackBar_CpsMin.Maximum = 30;
             this.trackBar_CpsMin.Minimum = 10;
             this.trackBar_CpsMin.Name = "trackBar_CpsMin";
             this.trackBar_CpsMin.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar_CpsMin.Size = new System.Drawing.Size(45, 137);
+            this.trackBar_CpsMin.Size = new System.Drawing.Size(69, 228);
             this.trackBar_CpsMin.TabIndex = 3;
             this.trackBar_CpsMin.Value = 10;
             this.trackBar_CpsMin.Scroll += new System.EventHandler(this.trackBar_CpsMin_Scroll);
@@ -95,9 +99,10 @@
             // 
             this.ValueCpsMaxLabel.AutoSize = true;
             this.ValueCpsMaxLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ValueCpsMaxLabel.Location = new System.Drawing.Point(309, 174);
+            this.ValueCpsMaxLabel.Location = new System.Drawing.Point(441, 290);
+            this.ValueCpsMaxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ValueCpsMaxLabel.Name = "ValueCpsMaxLabel";
-            this.ValueCpsMaxLabel.Size = new System.Drawing.Size(32, 25);
+            this.ValueCpsMaxLabel.Size = new System.Drawing.Size(43, 36);
             this.ValueCpsMaxLabel.TabIndex = 4;
             this.ValueCpsMaxLabel.Text = "00";
             // 
@@ -105,9 +110,10 @@
             // 
             this.ValueCpsMinLabel.AutoSize = true;
             this.ValueCpsMinLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ValueCpsMinLabel.Location = new System.Drawing.Point(360, 173);
+            this.ValueCpsMinLabel.Location = new System.Drawing.Point(514, 288);
+            this.ValueCpsMinLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ValueCpsMinLabel.Name = "ValueCpsMinLabel";
-            this.ValueCpsMinLabel.Size = new System.Drawing.Size(32, 25);
+            this.ValueCpsMinLabel.Size = new System.Drawing.Size(43, 36);
             this.ValueCpsMinLabel.TabIndex = 5;
             this.ValueCpsMinLabel.Text = "00";
             // 
@@ -115,9 +121,10 @@
             // 
             this.MaxLabel.AutoSize = true;
             this.MaxLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MaxLabel.Location = new System.Drawing.Point(296, 9);
+            this.MaxLabel.Location = new System.Drawing.Point(423, 15);
+            this.MaxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaxLabel.Name = "MaxLabel";
-            this.MaxLabel.Size = new System.Drawing.Size(45, 25);
+            this.MaxLabel.Size = new System.Drawing.Size(63, 36);
             this.MaxLabel.TabIndex = 6;
             this.MaxLabel.Text = "Max";
             // 
@@ -125,9 +132,10 @@
             // 
             this.MinLabel.AutoSize = true;
             this.MinLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinLabel.Location = new System.Drawing.Point(347, 9);
+            this.MinLabel.Location = new System.Drawing.Point(496, 15);
+            this.MinLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MinLabel.Name = "MinLabel";
-            this.MinLabel.Size = new System.Drawing.Size(42, 25);
+            this.MinLabel.Size = new System.Drawing.Size(59, 36);
             this.MinLabel.TabIndex = 7;
             this.MinLabel.Text = "Min";
             // 
@@ -135,17 +143,19 @@
             // 
             this.EnableKeyLabel.AutoSize = true;
             this.EnableKeyLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnableKeyLabel.Location = new System.Drawing.Point(12, 58);
+            this.EnableKeyLabel.Location = new System.Drawing.Point(17, 97);
+            this.EnableKeyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnableKeyLabel.Name = "EnableKeyLabel";
-            this.EnableKeyLabel.Size = new System.Drawing.Size(97, 25);
+            this.EnableKeyLabel.Size = new System.Drawing.Size(140, 36);
             this.EnableKeyLabel.TabIndex = 8;
             this.EnableKeyLabel.Text = "Enable Key";
             // 
             // EnableKeyButton
             // 
-            this.EnableKeyButton.Location = new System.Drawing.Point(115, 60);
+            this.EnableKeyButton.Location = new System.Drawing.Point(164, 100);
+            this.EnableKeyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EnableKeyButton.Name = "EnableKeyButton";
-            this.EnableKeyButton.Size = new System.Drawing.Size(75, 23);
+            this.EnableKeyButton.Size = new System.Drawing.Size(107, 38);
             this.EnableKeyButton.TabIndex = 9;
             this.EnableKeyButton.Text = "button1";
             this.EnableKeyButton.UseVisualStyleBackColor = true;
@@ -155,18 +165,24 @@
             // 
             this.ThemeLabel.AutoSize = true;
             this.ThemeLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ThemeLabel.Location = new System.Drawing.Point(12, 97);
+            this.ThemeLabel.Location = new System.Drawing.Point(17, 162);
+            this.ThemeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ThemeLabel.Name = "ThemeLabel";
-            this.ThemeLabel.Size = new System.Drawing.Size(65, 25);
+            this.ThemeLabel.Size = new System.Drawing.Size(94, 36);
             this.ThemeLabel.TabIndex = 10;
             this.ThemeLabel.Text = "Theme";
             // 
             // comboBoxTheme
             // 
             this.comboBoxTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTheme.Location = new System.Drawing.Point(83, 100);
+            this.comboBoxTheme.Items.AddRange(new object[] {
+            "Gray",
+            "Dark",
+            "Light"});
+            this.comboBoxTheme.Location = new System.Drawing.Point(119, 167);
+            this.comboBoxTheme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxTheme.Name = "comboBoxTheme";
-            this.comboBoxTheme.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxTheme.Size = new System.Drawing.Size(171, 33);
             this.comboBoxTheme.TabIndex = 11;
             this.comboBoxTheme.SelectedIndexChanged += new System.EventHandler(this.comboBoxTheme_SelectedIndexChanged);
             // 
@@ -174,9 +190,10 @@
             // 
             this.LanguageLabel.AutoSize = true;
             this.LanguageLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LanguageLabel.Location = new System.Drawing.Point(12, 136);
+            this.LanguageLabel.Location = new System.Drawing.Point(17, 227);
+            this.LanguageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LanguageLabel.Name = "LanguageLabel";
-            this.LanguageLabel.Size = new System.Drawing.Size(89, 25);
+            this.LanguageLabel.Size = new System.Drawing.Size(127, 36);
             this.LanguageLabel.TabIndex = 12;
             this.LanguageLabel.Text = "Language";
             // 
@@ -184,20 +201,21 @@
             // 
             this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLanguage.Items.AddRange(new object[] {
-            "Gray",
-            "Dark",
-            "Light"});
-            this.comboBoxLanguage.Location = new System.Drawing.Point(115, 139);
+            "English",
+            "Français"});
+            this.comboBoxLanguage.Location = new System.Drawing.Point(164, 232);
+            this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
-            this.comboBoxLanguage.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(171, 33);
             this.comboBoxLanguage.TabIndex = 13;
+            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(417, 210);
+            this.ClientSize = new System.Drawing.Size(596, 350);
             this.Controls.Add(this.comboBoxLanguage);
             this.Controls.Add(this.LanguageLabel);
             this.Controls.Add(this.comboBoxTheme);
@@ -212,6 +230,7 @@
             this.Controls.Add(this.trackBar_CpsMax);
             this.Controls.Add(this.StateLabel);
             this.Controls.Add(this.consoleButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "A l\'aise Clicker";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_CpsMax)).EndInit();
